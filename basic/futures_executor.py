@@ -27,7 +27,7 @@ if __name__ == '__main__':
     start_time = time.time()
     for item in number_list:
         print(evaluate_item(item))
-    print('Sequential execution in' + str(time.time() - start_time), 'seconds')
+    print('Sequential execution in ' + str(time.time() - start_time), 'seconds')
 
     start_time_two = time.time()
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
@@ -43,5 +43,7 @@ if __name__ == '__main__':
             print(future.result())
     print('Process pool execution in ' + str(time.time() - start_time_three), 'seconds')
 
-
-
+"""
+ThreadPoolExecutor 和 ProcessPoolExecutor都是executor并行执行任务，但是ProcessPoolThread使用了多核处理的模块
+让我们可以不受GIL的限制，大大缩短时间。
+"""
