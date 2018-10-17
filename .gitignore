@@ -2,3 +2,5 @@
 .idea/
 threading_demo.pyc
 threads_name.pyc
+/sql
+sql
