@@ -4,3 +4,5 @@ threading_demo.pyc
 threads_name.pyc
 /sql
 sql
+.DS_Store
+celeryintro/__pycache__/
